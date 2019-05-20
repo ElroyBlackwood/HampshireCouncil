@@ -1,0 +1,342 @@
+footer {
+	.footer-logos {
+		width: 60vw;
+		margin: 3.75vh auto 2.5vh;
+		.logo-carousel-slide {
+			position: relative;
+			.footer-logo {
+				@include bg_img_contain();
+				padding-top: 5vw;
+				opacity: 1;
+				@include ease(opacity, 0.5s)
+			}
+			.hover {
+				opacity: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				padding-top: 5vw;
+				top: 0;
+			}
+			.hovered {
+				opacity: 1;
+			}
+		}
+		.logo-carousel-slide:focus, .footer-logo:focus {
+			outline: none;
+		}
+		.logo-carousel-slide:hover, .footer-logo:hover {
+			cursor: pointer;
+		}
+	}
+	.footer-banner {
+		background-image: url("../images/bg-red-gradiant.png");
+		text-align: center;
+		color: #fff;
+		padding: 2vh 0;
+		@include bg_img_cover();
+		h1 {
+			margin: 0;
+		}
+	}
+	.footer-main {
+		background-color: #414141;
+		.footer-social {
+			@include flexbox();
+			@include flex-center();
+			padding: 5vh 0;
+			a {
+				margin: 0 0.5vw;
+				img {
+
+				}
+			}
+		}
+		.footer-download {
+			.dwn-broucher {
+				@include flexbox();
+				align-items: center;
+				justify-content: center;
+				form {
+					@include flexbox();
+					flex-wrap: wrap;
+					justify-content: center;
+					p {
+						align-self: stretch;
+					}
+					#red_bg {
+						@include flexbox();
+						align-items: center;
+						position: relative;
+						background-image: url("../images/bnt-bg.png");
+						background-repeat: no-repeat;
+						background-size: cover;
+						color: #fff;
+						transition: ease 0.5s all;
+						padding: 0.75vw 2vw;
+					}
+					span {
+						align-self: stretch;
+						height: 100%;
+						input {
+							padding: 0.5vh 0 0.5vh 3vh;
+						}
+					}
+					#dwn_bro {
+						position: relative;
+						background-color: transparent;
+						height: 100%;
+						width: 100%;
+						z-index: 10;
+						background-image: none;
+						background-repeat: no-repeat;
+						background-size: cover;
+						color: #fff;
+						padding: 0 2vh;
+						border: none;
+						transition: ease 0.5s all;
+						display: inline-block;
+						text-transform: uppercase;
+						background-color: transparent;
+					}
+					.sub-btn {
+						position: relative;
+						font-family: "FontAwesome";
+						background-color: #fff;
+					}
+					.sub-btn:before {
+						content: "\f061";
+						font-family: "FontAwesome";
+						@include overlay_center();
+						z-index: 9;
+						color: #FF0E04;
+					}
+					#dwn_bro:after {
+						position: relative;
+						content: 'arrow';
+					}
+				}
+				div.wpcf7-response-output {
+					width: 60%;
+					text-align: center;
+					border: none;
+					color: #fff;
+				}
+				#red_bg {
+					@include flexbox();
+					align-items: center;
+					position: relative;
+					background-image: url("../images/bnt-bg.png");
+					background-repeat: no-repeat;
+					background-size: cover;
+					color: #fff;
+					transition: ease 0.5s all;
+					padding: 0.75vw 2vw;
+					border: 2px solid transparent;
+				}
+				#red_bg:hover {
+					border-color: #E52223;
+					color: #E52223;
+					background-image: none;
+				}
+			}
+		}
+		.footer-nav {
+			@include flexbox();
+			justify-content: center;
+			.footer-nav-col1 {
+				ul {
+					width: 70%;
+					margin: auto;
+					li {
+
+					}
+				}
+			}
+			.footer-nav-col2 {
+				ul {
+					li {
+						
+					}
+				}
+			}
+			.footer-nav-col3 {
+				ul {
+					li {
+						
+					}
+				}
+			}
+			ul {
+				display: block;
+				padding: 4vw 2vw;
+				width: 14vw;
+				li {
+					padding: 0 0 2vh;
+					a {
+						text-transform: uppercase;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		text-align: center;
+	    color: rgb(128,128,130);
+	    padding: 2vh 0;
+	    hr {
+	    	width: 60vw;
+	    	margin: 1vh auto;
+	    }
+	    p {
+	    	color: rgb(128,128,130);
+	    	text-align: center;
+	    	a {
+	    		 color: rgb(128,128,130);
+	    		 font-size: 0.7vw;
+	    	}
+	    }
+	    p:last-of-type {
+	    	text-align: right;
+	    	width: 60vw;
+	    	margin: 0 auto;
+	    	font-size: 0.7vw;
+	    }
+	}
+}
+
+@include respond-below(xs) {
+	footer {
+		.footer-logos {
+			width: 85vw;
+		    flex-wrap: wrap;
+			.footer-logo {
+				width: 29.333333%;
+				padding-top: 15vw;
+				margin: 2vh 2%;
+			}
+		}
+		.footer-banner {
+			
+			h1 {
+				
+			}
+			h2 {
+				font-size: 7vw;
+				width: 85vw;
+				margin: auto;
+			}
+		}
+		.footer-main {
+			padding: 0 0 3vh;
+			.footer-social {
+				
+				a {
+					
+					img {
+
+					}
+				}
+			}
+			.footer-download {
+				.dwn-broucher {
+					margin: 0 0 5vh;
+					div[role='form'] {
+						margin: auto;
+					}
+					form {
+						width: 85vw;
+						flex-wrap: nowrap;
+						span {
+							border-radius: 0;
+						}
+					}
+				}
+			}
+			.footer-nav {
+				width: 85vw;
+				padding: 0;
+				margin: auto;
+				flex-wrap: wrap;
+				div[class^="footer-nav-col"], div[class*=" footer-nav-col"] {
+					width: 50%;
+					ul {
+						width: 90%;
+						justify-content: flex-start;
+						height: auto;
+						padding: 0;
+						margin: 0 auto 0 0;				
+						li {
+							width: 90%;
+							margin: 0 0 1vh;
+							a {
+								width: 90%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.copyright {
+			
+		    hr {
+		    	width: 85vw;
+		    	margin: 2vh auto;
+		    }
+		    p {
+		    	font-size: 3vw;
+	    	    width: 85vw;
+	    	    margin: auto;
+		    	a {
+		    		font-size: 3vw; 
+		    	}
+		    }
+		    p:last-of-type {
+		    	font-size: 3vw;
+		    	width: 85vw;
+		    	margin: 0 auto;
+		    }
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	footer {
+		.footer-main {
+			.footer-nav {
+				width: 100vw;
+				ul {
+					height: 45vh;
+					left: 4vw;
+					justify-content: flex-start;
+				}
+			}
+		}
+		.footer-logos {
+			width: 80vw;
+			.footer-logo {
+				padding-top: 6vw;
+			}
+		}
+		.copyright {
+			hr {
+				width: 75vw;
+			}
+			p:last-of-type {
+				width: 75vw;
+			}
+		}
+	}
+	@media screen and (orientation: portrait) {
+		footer {
+			.footer-main {
+				.footer-nav {
+					ul {
+						height: 35vh;
+					}
+				}
+			}
+		}
+	}
+}

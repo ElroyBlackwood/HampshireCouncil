@@ -1,0 +1,169 @@
+.content-block-social-feeds {
+	width: 60vw;
+	margin: auto;
+	@include flexbox();
+	justify-content: center;
+	padding: 10vh 0;
+	.social-feed-container {
+		width: 45%;
+		margin: 0 0 0 5%;
+		h2 {
+			margin: 0 0 5vh;
+		}
+		.instagram-wdg {
+			height: 56.7vh;
+		    overflow: auto;
+		}
+		.facebook-wdg-container {
+			height: 56.7vh;
+			position: relative;
+			iframe{
+				height: 100%;
+			}
+		}
+	}
+}
+
+// overides
+#sb_instagram {
+	background-color: #fff;
+	.sbi_posts_count {
+		font-size: 1vw;
+		position: relative;
+		i {
+			display: none;
+		}
+	}
+	.sbi_posts_count:after {
+		content: 'posts';
+		position: absolute;
+		top: 120%;
+		left: 50%;
+		@include translate(-50%, -50%);
+		color: #969696;
+	}
+	.sbi_followers {
+		font-size: 1vw;
+		position: relative;
+		i {
+			display: none;
+		}
+	}
+	.sbi_followers:after {
+		content: 'followers';
+		position: absolute;
+		top: 120%;
+		left: 50%;
+		@include translate(-50%, -50%);
+		color: #969696;
+	}
+}
+
+#sb_instagram .sb_instagram_header a {
+	display: none;
+}
+
+.sbi_bio_info {
+	width: 100% !important;
+	@include flexbox();
+	justify-content: space-evenly;
+}
+
+.sbi_header_bar {
+	margin: 1vw 0;
+}
+
+#sb_instagram .sbi_bio_info span {
+	padding-right: 0 !important;
+}
+
+@include respond-below(xs) {
+	.content-block-social-feeds {
+		width: 90vw;
+		flex-direction: column;
+		padding: 10vh 0;
+		.social-feed-container {
+			width: 100%;
+			margin: auto;
+			h1 {
+				margin: 0 0 4vh;
+				font-size: 8vw;
+			}
+			.instagram-wdg {
+				height: 500px;
+				margin: 0 0 10vh;
+			}
+			.facebook-wdg-container {
+				height: auto;
+			}
+		}
+	}
+
+	// overides
+	#sb_instagram {
+		.sbi_posts_count {
+			font-size: 6vw;
+			position: relative;
+			i {
+				display: none;
+			}
+		}
+		.sbi_posts_count:after {
+			content: 'posts';
+			position: absolute;
+			top: 120%;
+			left: 50%;
+			@include translate(-50%, -50%);
+			color: #969696;
+		}
+		.sbi_followers {
+			font-size: 6vw;
+			position: relative;
+			i {
+				display: none;
+			}
+		}
+		.sbi_followers:after {
+			content: 'followers';
+			position: absolute;
+			top: 120%;
+			left: 50%;
+			@include translate(-50%, -50%);
+			color: #969696;
+		}
+	}
+
+	#sb_instagram .sb_instagram_header a {
+		display: none;
+	}
+
+	.sbi_bio_info {
+		width: 100% !important;
+		@include flexbox();
+		justify-content: space-evenly;
+	}
+
+	.sbi_header_bar {
+		margin: 1vw 0 3vh;
+	}
+
+	#sb_instagram .sbi_bio_info span {
+		padding-right: 0 !important;
+	}
+}
+
+@include respond-between(xs, sm) {
+	.content-block-social-feeds {
+		width: 90vw;
+		.social-feed-container {
+			h2 {
+				font-size: 2.5vw;
+			}
+		}
+	}
+	.sbi_load_btn {
+		.sbi_btn_text {
+			font-size: 2vw;
+		}
+	}
+}

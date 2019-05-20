@@ -1,0 +1,523 @@
+.frms-container {
+	background-color: #EAEAEA;
+	padding: 10vh 0 0;
+	fieldset {
+		border: none;
+	}
+	.frms-wrapper {
+		width: 70vw;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 0 0 10vh;
+		.submit-btn {
+			width: auto !important;
+			background-color: #BAB9B9;
+			color: #58595B;
+			padding: 1vh 2vh;
+		}
+		.nav-tabs .active{
+			height: 5vh;
+			background-color: #BAB9B9;
+			color: #58595B;
+			padding: 0 2vh;
+			@include flexbox();
+			align-items: center;
+		}
+		@include flexbox();
+		.callback {
+			padding: 1vw;
+			height: max-content;
+			background-color: #58585B;
+			color: #fff;
+			width: 25%;
+			margin: 0 5% 0 0;
+			.callback-txt {
+				p {
+					margin: 0 0 1vh;
+				}
+				h3 {
+					margin: 0 0 2vh;
+				}
+				p:last-of-type {
+					margin: 0 0 3vh;
+				}
+			}
+			fieldset {
+				p {
+					margin: 0 0 2vh;
+				}
+				label {
+					@include flexbox();
+					margin: 0;
+				}
+				select, input {
+					width: 100%;
+					border: none;
+					padding: 0.5vh 1vh;
+				}
+				input[type="submit"] {
+				}
+			}
+		}
+		.enquiry-forms {
+			width: 75%;
+			.nav-tabs {
+			    border-bottom: 4px solid #BAB9B9;
+			}
+			.tab-btn {
+				height: 5vh;
+				color: #58595B;
+				padding: 0 2vh;
+				@include flexbox();
+				align-items: center;
+			}
+			#general-enquiry, #transport-enquiry, #accounts-enquiry{
+				label {
+					width: 80%;
+				}
+				select {
+					width: 80%;
+				}
+				input[type="text"], input[type="select"], input[type="email"], input[type="tel"], textarea, input[type="number"], input[type="date"] {
+					width: 80%;
+				}
+				input[type="radio"] {
+				    box-sizing: border-box;
+				    padding: 0;
+				    height: 1vw;
+				    width: 1vw;
+				    margin-top: 0;
+				    float: left;
+				    margin-right: 10px;
+				}
+				.form-title {
+					width: 80%;
+					margin: 2vh 0;
+					h3 {
+						width: 80%;
+					}
+					hr {
+						width: 80%;
+						border-top-color: #CA5A3F;
+					}
+				}
+			}
+			fieldset {
+				p {
+					margin: 0 0 2vh;
+				}
+				label {
+					@include flexbox();
+					align-items: center;
+					margin: 0;
+				}
+				select, input, textarea {
+					width: 60%;
+					padding: 0.5vh 1vh;
+					border: none;
+				}
+				input[type="checkbox"] {
+					width: 1vw;
+					height: 1vw;
+					margin: 0 1vw 0 0;
+				}
+				input[type="submit"] {
+					width: 50% !important;
+				}
+			}
+		}
+	}
+	.g-recaptcha {
+		margin: 0 0 2vh;
+		padding: 2vh 0;
+	}
+}
+
+div.wpcf7-response-output {
+    border: 2px solid #ff0000 !important;
+}
+
+span.wpcf7-not-valid-tip {
+	color: #fff !important;
+	 border: 2px solid #ff0000 !important;
+	 padding: 0 1vw;
+}
+
+.tab-content {
+	padding: 3vh 0 0 0;
+	span.wpcf7-not-valid-tip {
+		color: #58595B !important;
+	}
+}
+
+.gmap-wrapper {
+	position: relative;
+	.gmap {
+		width: 100%;
+		height: 70vh;
+	}
+	.custom-map-marker {
+		position: absolute;
+		top: 50%;
+		left: 70%;
+		@include translate(-50%, -50%);
+		z-index: 10;
+		background-color: #fff;
+		padding: 4vw 3vw;
+		h4 {
+			color: #EE2624;
+		}
+		a:last-of-type {
+			color: #EE2624;
+		}
+	}
+}
+
+.depot-info {
+	h1 {
+		width: 75vw;
+		color: #fff;
+		margin: 0 0 6vh;
+	}
+	background-color: #464748;
+	@include flexbox;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10vh 0;
+	.depot-row {
+		@include flexbox;
+	    width: 75vw;
+		.depot-wdg {
+			color: #fff;
+			width: 23%;
+			margin: 0 2% 0 0;
+			
+			h3 {
+
+			}
+			p {
+
+			}
+		}
+		.red-border {
+			border-bottom: 1px solid #EE2624;
+			padding-bottom: 4vh;
+			margin-bottom: 4vh;
+		}
+		hr {
+			border: 0.1vh solid #EE2624;
+			margin: 1vh 0;
+		}
+	}
+}
+
+.wpcf7-form-control-wrap {
+	.wpcf7-checkbox {
+		width: 40%;
+		.wpcf7-list-item {
+			@include flexbox();
+			margin: 0;
+			width: 100%;
+			align-items: center;
+			input[type="checkbox"] {
+			    margin: 1vh 1vw 1vh 0;
+			    width: 2vw;
+			    span {
+			    	width: 100%;
+			    }
+			}
+		}
+	}
+}
+
+.wpcf7-submit {
+	@include btn01();
+	text-transform: uppercase;
+	background-color: transparent;
+}
+
+.wpcf7-submit:hover {
+	@include btn01_hover();
+}
+
+@include respond-above(xs) {
+	.custom-map-marker-mb {
+		display: none;
+	}
+}
+
+@include respond-below(xs) {
+	.wpcf7-form-control-wrap {
+		.wpcf7-checkbox {
+			width: 80%;
+			.wpcf7-list-item {
+				
+				input[type="checkbox"] {
+				    margin: 1vh 3vw 1vh 0;
+				    width: 3vw;
+				    height: 3vw;
+				    span {
+				    	
+				    }
+				}
+			}
+		}
+	}
+
+	.frms-container {
+	
+		fieldset {
+		}
+		.frms-wrapper {
+			width: 85vw;
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+			.submit-btn {
+				
+			}
+			.nav-tabs .active{
+				
+			}
+			.nav-tabs {
+				li {
+					width: 100%;
+				}
+			}
+			.callback {
+				padding: 8vw;
+				width: 85vw;
+				margin: 0 5% 4vh 0;
+				.callback-txt {
+					p {
+						
+					}
+					h3 {
+						
+					}
+					p:last-of-type {
+						
+					}
+				}
+				fieldset {
+					p {
+						
+					}
+					label {
+						
+					}
+					select, input {
+						width: 100%;
+					}
+					input[type="submit"] {
+						
+					}
+				}
+			}
+			.enquiry-forms {
+				width: 100%;
+				.nav-tabs {
+				    
+				}
+				.tab-btn {
+					justify-content: center;
+					height: 8vh;
+				}
+				#general-enquiry, #transport-enquiry, #accounts-enquiry{
+					label {
+						width: 100%;
+					}
+					select {
+						width: 100%;
+					}
+					input {
+						width: 100%;
+					}
+					input[type="text"], input[type="select"], input[type="email"], input[type="tel"], textarea, input[type="number"], input[type="date"] {
+						width: 100%;
+					}
+					input[type="radio"] {
+					    box-sizing: border-box;
+					    padding: 0;
+					    height: 4vw;
+					    width: 4vw;
+					    margin-top: 0;
+					    float: left;
+					    margin-right: 10px;
+					}
+					input[type="checkbox"] {
+						width: 4vw !important;
+						height: 4vw;
+						margin: 0 1vw 0 0;
+					}
+				}
+				fieldset {
+					p {
+						
+					}
+					label {
+						width: 100%;
+					}
+					select, input, textarea {
+						width: 100%;
+					}
+					input[type="checkbox"] {
+				
+					}
+					input[type="submit"] {
+					}
+				}
+			}
+		}
+		.g-recaptcha {
+		}
+	}
+
+	.gmap-wrapper {
+		.gmap {
+			
+		}
+		.custom-map-marker {
+			display: none;;
+			h4 {
+			}
+			a:last-of-type {
+			}
+		}
+
+	}
+
+	.custom-map-marker-mb {
+		display: block;
+		position: relative;
+		width: 85%;
+		margin: 5vh auto;
+		left: 0;
+		top: 0;
+		@include translate(0%, 0%);
+		h4 {
+			color: #EE2624;
+		}
+		a:last-of-type {
+			color: #EE2624;
+		}
+	}
+
+	.depot-info {
+		h1 {
+			width: 85vw;
+			color: #fff;
+			margin: 0 0 4vh;
+		}
+		padding: 6vh 0;
+		.depot-row {
+			width: 85vw;
+		    flex-wrap: wrap;
+			.depot-wdg {
+				width: 100%;
+				border-bottom: 1px solid #EE2624;
+				padding-bottom: 4vh;
+				margin-bottom: 4vh;
+				h3 {
+
+				}
+				p {
+
+				}
+			}
+			.red-border {
+				border-bottom: 1px solid #EE2624;
+				padding-bottom: 4vh;
+				margin-bottom: 4vh;
+			}
+			hr {
+				
+			}
+		}
+	}
+	.wpcf7-checkbox {
+		width: 100%;
+		.wpcf7-list-item {
+		    display: inline-block;
+		    margin: 0 0 0 1em;
+		    display: flex;
+		    width: 100%;
+		    align-items: center;
+		    margin: 1vh 0 1vh;
+		    input {
+		    	
+		    	margin: 0 4vh 0 0;
+		    }
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	.frms-container {
+		.frms-wrapper {
+			width: 95vw;
+			padding: 0 0 4vh;
+			.enquiry-forms {
+				width: 100%;
+				.nav-tabs {
+				    
+				}
+				.tab-btn {
+					justify-content: center;
+					height: 7vh;
+				}
+				#general-enquiry, #transport-enquiry, #accounts-enquiry{
+					label {
+						width: 80%;
+					}
+					select {
+						width: 80%;
+					}
+					input {
+						width: 80%;
+					}
+				}
+				fieldset {
+					p {
+						
+					}
+					label {
+						width: 100%;
+					}
+					select, input, textarea {
+						width: 100%;
+					}
+					input[type="checkbox"] {
+				
+					}
+					input[type="submit"] {
+					}
+				}
+			}
+			.callback {
+				width: 35%;
+				margin: 0 3% 0 0;
+			}
+		}
+	}
+	.wpcf7-checkbox {
+		width: 100%;
+		.wpcf7-list-item {
+		    margin: 0 0 0 1em;
+		    width: 100%;
+		    margin: 1vh 0 1vh;
+		    input {
+		    	width: 2vh !important;
+		    	height: 2vh;
+		    	margin: 0 4vh 0 0;
+		    }
+		}
+	}
+	.depot-info {
+		.depot-row {
+			h1 {
+				width: 90vw;
+			}
+			width: 90vw;
+		}
+	}
+}

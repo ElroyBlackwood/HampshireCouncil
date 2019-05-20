@@ -1,0 +1,121 @@
+#content-block-transport-grid {
+	.content-block-intro-text {
+		padding: 10vh 0;
+	}
+	.content-block-transport-grid {
+		// @include flexbox();
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-column-gap: 0.75vw;
+		padding: 0 0 15vh;
+		
+		a {
+			margin: 0 0 0.75vw;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+			z-index: 10;
+			.transport-grid-item {
+				@include bg_img_cover();
+				position: relative;
+				padding-top: 71%;
+				height: 100%;
+				overflow: hidden;
+				@include ease(all,0.5s)
+				z-index: 2;
+			}
+
+			.transport-grid-item:hover{
+				cursor: pointer;
+			}
+			.transport-grid-item:before {
+				@include background_opacity(0.5);
+			}
+
+			.transport-grid-item-overlay {
+				@include overlay_center();
+				@include flexbox();
+				@include flex-center();
+				text-align: center;
+				z-index: 2;
+				width: 100%;
+				height: 100%;
+				h3 {
+					text-transform: uppercase;
+					width: 90%;
+					margin: auto;
+					position: relative;
+					top: 0;
+					margin: 0;
+					@include ease(all, 0.5s);
+				}
+			}
+
+			.left-arrow {
+				position: absolute;
+				left: -40%;
+				@include translate(-50%, 0);
+				@include ease(all, 0.5s);
+			}
+		}
+		a:hover {
+			color: #fff;
+		}
+	}
+}
+
+@include respond-below(xs) {
+	#content-block-transport-grid {
+		.content-block-intro-text {
+			width: 90vw;
+			margin: auto;
+			padding: 5vh 0 5vh;
+		}
+		.content-block-transport-grid {
+			grid-template-columns: 1fr;	
+			grid-row-gap: 2vh;
+			padding: 0 0 15vh;
+			width: 85vw;
+			margin: auto;
+			
+			a {
+				
+				.transport-grid-item {
+					
+				}
+
+				.transport-grid-item:hover{
+					
+				}
+				.transport-grid-item:before {
+					
+				}
+
+				.transport-grid-item-overlay {
+					
+					h2 {
+					
+					}
+				}
+
+				.left-arrow {
+					top: 60%;
+				}
+			}
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	#content-block-transport-grid {
+		.content-block-transport-grid {
+			a {
+				.transport-grid-item-overlay {
+					h3 {
+						font-size: 2.5vw;
+					}
+				}
+			}
+		}
+	}
+}

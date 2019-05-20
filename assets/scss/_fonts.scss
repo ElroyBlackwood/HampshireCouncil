@@ -1,0 +1,31 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Open+Sans|Titillium+Web');
+
+@font-face {
+   font-family: 'Minion';
+   src: url("../fonts/MinionPro-Regular.otf") format("opentype");
+}
+
+// FONT VARIABLES
+$rubik : 'Rubik', sans-serif;
+$osans : 'Open Sans', sans-serif;
+$minion : 'Minion', sans-serif;
+$titillion : 'Titillium Web', sans-serif;
+
+// font clasess
+.font-sml {
+	font-size: 0.7vw;
+}
+
+.font-med {
+	font-size: 0.9vw;
+}
+
+.font-lg {
+	font-size: 1.1vw;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: $rubik;
+}
+

@@ -1,0 +1,25 @@
+.wpcf7-form-control-wrap {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+
+label, select, input {
+	width: 100%;
+	border: none;
+	padding: 0.5vh 0vh;
+}
+
+input[type="checkbox"] {
+	width: 1vw;
+	height: 1vw;
+	margin: 0 1vw 0 0;
+}
+input[type="submit"] {
+	width: auto;
+}
+
+
+
+div.wpcf7-response-output {
+	border: 2px solid #ff0000 !important;
+}

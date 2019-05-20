@@ -1,0 +1,179 @@
+html, body {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#{headings(1,6)} {
+	font-weight: 300;
+}
+
+p, a {
+	font-size: 0.9vw;
+	font-weight: 300;
+}
+
+p {
+	line-height: 1.7;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: $orange;
+	text-decoration: none;
+}
+
+
+.scale {
+	transform: scale(1.1);
+}
+
+.carousel-indicators {
+	bottom: 15%;
+	li {
+	    position: relative;
+	    height: 1vw;
+	    width: 1vw;
+	    background-color: #fff;
+	    border-radius: 50%;
+	    margin: 0 0.5vw;
+	}
+	.active {
+		background-color: #CC3B2E;
+	}
+}
+
+.active-link {
+		color: $orange !important;
+	}
+
+
+// plugin overides
+.promagnifier {
+	display: none;
+}
+
+#shiftnav-toggle-main {
+	background-color: transparent !important;
+}
+// back to top
+.bttop-wrapper {
+	width: 65vw;
+	margin: 10vh auto 0;
+	.bttop-container {
+		border: 1px solid #464748;
+		position: relative;
+		width: 10vw;
+		display: inline-block;
+		@include ease(all, 0.5s);
+		.bttop {
+			color: #464748;
+			margin: 0 0 0 15%;
+			padding: 0.5vw 0;
+		}
+		.up-arr {
+			position: absolute;
+			@include bg_img_contain();
+			width: 1vw;
+			padding-top: 1.5vw;
+		    top: 50%;
+		    left: 90%;
+		    @include translate(-60%, -50%);
+		}
+	}
+	.bttop-container:hover {
+		background-color: #464748;
+		.bttop {
+			color: #fff;
+		}
+		.up-arr {
+			background-image: url(../images/arrow-up-wht.png) !important;
+		}
+	}
+}
+
+.sticky-wrapper {
+	header {
+		transition: ease 0.5s all;
+		.logo-wrap {
+			a {
+				img {
+					width: 40%;
+				}
+			}
+		}
+		.nav-wrap {
+			ul {
+				height: 2vh;
+			    align-items: center;
+			}
+			ul.dropdown-menu {
+				height: auto;
+			}
+		}
+		.verticle-div {
+			height: 3vh;
+		}
+	}
+}
+
+.shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.current-menu-item > .shiftnav-target {
+	background-color: transparent !important;
+	background-image: url(../images/bnt-bg.png) !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+}
+
+#shiftnav-toggle-main {
+	background-color: #CA5A3F;
+}
+
+.shiftnav-menu-title {
+	img {
+		width: 40%;
+		margin: 2vh auto;
+	}
+}
+
+@include respond-below(xs) {
+	.bttop-wrapper {
+		width: 75vw;
+		.bttop-container {
+			width: 100%;
+		    padding: 3vw 0vw;
+			.bttop {
+				margin: 0 0 0 20%;
+				padding: 0.5vw 0;
+				font-size: 5vw;
+			}
+			.up-arr {
+				padding-top: 7vw;
+				width: 4vw;
+			}
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	p, a {
+		font-size: 1.7vw;
+	}
+
+	// back to top
+	.bttop-wrapper {
+		width: 75vw;
+		margin: 10vh auto 0;
+		.bttop-container {
+			width: 25vw;
+			.bttop {
+				padding: 1.5vw 0;
+				font-size: 2.5vw;
+			}
+			.up-arr {
+				padding-top: 2.5vw;
+			}
+		}
+	}
+}

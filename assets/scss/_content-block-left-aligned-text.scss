@@ -1,0 +1,33 @@
+.content-left-aligned-text-block {
+	.left-align-text {
+		width: 35%;
+		margin: 10vh 0 10vh 30%;
+		#{headings(1,6)} {
+			margin: 0 0 2vh;
+		}
+	}
+}
+
+@include respond-below(xs) {
+	.content-left-aligned-text-block {
+		.left-align-text {
+			width: 90vw;
+			margin: 4vh auto;
+			p {
+				margin: 0 0 4vh;
+			}
+			#{headings(1,6)} {
+				margin: 0 0 4vh;
+			}
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	.content-left-aligned-text-block {
+		.left-align-text {
+			width: 55%;
+			margin: 10vh 0 10vh 20%;
+		}
+	}
+}

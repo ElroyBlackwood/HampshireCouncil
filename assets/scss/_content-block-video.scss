@@ -1,0 +1,26 @@
+#content-block-video {
+	width: 50vw;
+	margin: auto;
+	.content-block-video {
+		width: 100%;
+		position: relative;
+		margin: 2vh auto;
+		padding-bottom: 56.25%;
+		iframe {
+			position: absolute;
+		}
+	}
+}
+
+@include respond-below(xs) {
+	#content-block-video {
+	    width: 90vw;
+	    margin: auto;
+	    .content-block-video {
+	        width: 100%;
+	        position: relative;
+	        margin: 6vh auto;
+	        padding-bottom: 56.25%;
+	    }
+	}
+}

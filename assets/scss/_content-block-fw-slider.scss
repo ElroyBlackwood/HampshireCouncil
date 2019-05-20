@@ -1,0 +1,6 @@
+.content-block-fw-slider {
+	.carousel-item {
+		height: 60vh;
+		@include bg_img_cover();
+	}
+}
